@@ -40,13 +40,13 @@ export default function Home({ promoIsEnable}) {
   )
 }
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const promoIsEnable = await enablePromo()
 
   return {
     props: {
       promoIsEnable,
     },
-    revalidate: 24 * 60 * 60,
+    revalidate: 10,
   }
 }
