@@ -47,6 +47,5 @@ export async function getServerSideProps() {
     props: {
       promoIsEnable,
     },
-    revalidate: 10,
   }
 }
